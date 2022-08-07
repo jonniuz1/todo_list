@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+    {% block content %}
+    
+    <!--  Navbar  -->
+    <div class="header-bar">
+        <a href="{% url 'tasks' %}">&#8592;Go Back</a>
+    </div>
+    <!--  End of navbar  -->
+
+    <!--  Main content  -->
+    <div class="card-body">
+    
+        <form action="" method="POST">
+            {% csrf_token %}
+            <p>Are you sure to delete the task "{{ task.title }}" ?</p>
+            {{ form.as_p }}
+            <input class="button" type="submit" name="name">
+            
+
+        </form>
+    
+    </div>
+
+
+    {% endblock content %}

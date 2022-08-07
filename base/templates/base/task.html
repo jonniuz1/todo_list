@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+    {% block content %}
+    {% include 'base/navbar.html' %}
+        <h1>My To Do List</h1>
+        <a id="links" href="{% url 'tasks' %} ">Go back</a>
+
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Complete</th>
+            </tr>
+            <tr>
+                <td>{{ task.title }}</td>
+                <td>{{ task.description }}</td>
+                <td>{{ task.complete }}</td>
+            </tr>
+        </table>
+    {% endblock content %}
+        

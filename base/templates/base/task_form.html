@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+    {% block content %}    
+    <!--  Navbar  -->
+    <div class="header-bar">
+        <a href="{% url 'tasks' %}">&#8592; Back</a>
+    </div>
+    <!--  End of navbar  -->
+
+    <!--  Main content  -->
+    <div class="card-body">
+
+        <form action="" method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="name">
+
+        </form>
+    </div>
+    <!-- End of Main content -->
+    {% endblock content %}
